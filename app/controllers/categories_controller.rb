@@ -1,16 +1,11 @@
 class CategoriesController < ApplicationController
-    def index
-    end
+  def index; end
 
-    def new
-    end
+  def new; end
 
-    def create
-    end
+  def create; end
 
-    def destroy
-    end
+  def destroy; end
 
-    def category_params
-    end
+  def category_params; end
 end
