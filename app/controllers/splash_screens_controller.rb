@@ -1,0 +1,2 @@
+class SplashScreensController < ApplicationController
+end
