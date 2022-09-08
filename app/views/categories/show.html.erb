@@ -1,0 +1,40 @@
+<section>
+  <header>
+    <nav>
+      <ul>
+        <li>
+        <%= link_to categories_path do %>
+          <i class="fa fa-arrow-left"></i>
+          <% end %>
+        </li>
+        <li>
+          DETAILS
+        </li>
+        <li>
+          <i class="fa fa-bars"></i>
+        </li>
+      </ul>
+    </nav>
+  </header>
+ <section>
+    <div class='desc'>
+      <%= image_tag category.icon rescue image_tag 'https://img.icons8.com/fluency/48/000000/diversity.png' %>
+      <span>
+        <h2><%= @category.name %></h2>
+      </span>
+    </div>
+    <hr>
+    <div>
+      <h3>Transaction 1</h3>
+      <small>DateTime</small>
+    </div>
+    <hr>
+    <div>
+      <h4>TOTAL PAYMENT</h4>
+      <strong>$0.00</strong>
+    </div>
+
+    <%= button_to "Delete Category", category_path, method: :delete, class: 'category-btn' %>
+
+  </section> 
+</section>
