@@ -30,7 +30,7 @@
                 <small><%= category.created_at.to_date.strftime("%d %b, %Y") %></small>
               </span>
             </div>
-              <strong>$0.00</strong>
+              <p class='strong'>$<%= category.deals.sum(:amount) || '0.00'%></p>
           </li> 
           <% end %>
           <% end %>

@@ -2,7 +2,7 @@ class CreateCategories < ActiveRecord::Migration[7.0]
   def change
     create_table :categories do |t|
       t.string :name
-      t.float :amount
+      t.string :icon
       t.references :author, null: false, index: true, foreign_key: { to_table: :users }
 
       t.timestamps
