@@ -3,13 +3,7 @@ class SplashScreensController < ApplicationController
 
   def index; end
 
-  private
-
   def authenticate!
-    if user_signed_in?
-      redirect_to categories_path
-    else
-      redirect_to root_path
-    end
+    redirect_to categories_path if user_signed_in?
   end
 end
