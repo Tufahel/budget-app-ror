@@ -1,12 +1,20 @@
 <section>
- <section>
-     <div>
-     <h3 class="text-center">Transactions</h3>
-     <div class="d-flex align-items-center">
-        <%= button_to "+", new_category_path, method: :get, class: 'mx-2 btn btn-light border text-center' %>
-        <div><p> Create new category </p></div>
-     </div>
-     </div>
+  <section class="d-flex flex-column min-vh-100">
+    <header>
+      <nav>
+        <ul class='d-flex justify-content-between p-2 color1 m-0'>
+          <li>
+            <i class="fa fa-bars"></i>
+          </li>
+          <li>
+            TRANSACTIONS
+          </li>
+          <li class="logout">
+            <%= button_to "Logout", destroy_user_session_path(current_user), method: :delete, class: "color1" %>
+          </li>
+        </ul>
+      </nav>
+  </header>
      <% if @categories.exists? %>
           <% @categories.each do |category| %>
            <%= link_to category_path(category.id), method: :get do %> 
@@ -23,11 +31,16 @@
               </div>
             </div>
           <% end %>
-        <% end %>
- 
-   
+        <% end %> 
    <% else %>
           <p>No Category Added yet</p> 
-      <% end %>
-  <div>
+   <% end %>
+  </section>
+
+  <section class="mt-auto">
+     <div>
+        <%= button_to "Add Category", new_category_path, method: :get, class: 'w-100 color2 p-2' %>
+     </div>
+    </div>
+  </section>
 </section>

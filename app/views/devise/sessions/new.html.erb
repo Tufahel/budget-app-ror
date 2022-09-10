@@ -10,13 +10,13 @@
           Login
         <li>
         <li>
-          <input type="submit" value='Next' form='form' class='submit color1'>
+          <input type="submit" value='Sign in' form='form' class='submit color1'>
         </li>
       </ul>
     </nav>
   </header>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+ <%= form_for(resource, as: resource_name, url: session_path(resource_name), :html => {:class => 'form', :id => 'form' }) do |f| %>
   <div class="field">
     <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "w-100" %>
   </div>
