@@ -14,6 +14,10 @@
  *= require_self
  */
 
+ /*
+ *= require font-awesome
+ */
+
  @font-face {
     font-family: proximaThin;
     src: url(Proxima_Nova_Alt_Thin.otf);
@@ -29,5 +33,6 @@ ul {
 
 .color1{
     background-color: #3778c2;
-    color: white
+    color: white;
+    border: none;
 }
