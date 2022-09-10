@@ -1,14 +1,14 @@
 <header>
-  <div>
-    <h1>Budget Now</h1>
-  </div>
+  <div class="text-center">
+    <h1>Budget Tracker</h1>
+  </div><br>
   <nav>
-    <ul>
+    <ul >
       <li>
-        <%= link_to "LOG IN", new_user_session_path %>
+        <%= link_to "LOG IN", new_user_session_path, class: "link btn w-100 color1" %>
       </li>
       <li>
-        <%= link_to "SIGN UP", new_user_registration_path %>
+        <%= link_to "SIGN UP", new_user_registration_path, class: "link btn w-100" %>
       </li>
     </ul>
   </nav>
