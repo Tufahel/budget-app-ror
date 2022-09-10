@@ -11,6 +11,12 @@
 - Rails
 - Postgresql
 - Bootstrap 5
+- CSS
+- RSpec
+- FontAwsome
+
+## Live Demo
+For the link to the live demo, [Click here](https://mysterious-mountain-41910.herokuapp.com/)
 
 ## Getting Started
 
