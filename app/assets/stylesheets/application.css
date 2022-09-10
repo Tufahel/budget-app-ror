@@ -1,41 +1,41 @@
- /*
+/*
  *= require font-awesome
  */
 
 @import url('https://fonts.googleapis.com/css2?family=Proxima+Nova');
 
 * {
-    font-family: 'proxima-nova', sans-serif;
-    color: var(--grey-1);
-    margin: 0;
-    padding: 0;
-  }
+  font-family: 'proxima-nova', sans-serif;
+  color: var(--grey-1);
+  margin: 0;
+  padding: 0;
+}
 
- @font-face {
-    font-family: proximaThin;
-    src: url(Proxima_Nova_Alt_Thin.otf);
+@font-face {
+  font-family: proximaThin;
+  src: url(Proxima_Nova_Alt_Thin.otf);
 }
 
 ul {
-	list-style: none;
+  list-style: none;
 }
 
 .link {
-    text-decoration: none;
+  text-decoration: none;
 }
 
-.color1{
-    background-color: #3778c2;
-    color: white;
-    border: none;
+.color1 {
+  background-color: #3778c2;
+  color: white;
+  border: none;
 }
 
-.color2{
-    background-color: #5fb523;
-    color: white;
-    border: none;
+.color2 {
+  background-color: #5fb523;
+  color: white;
+  border: none;
 }
 
-.color3{
-    color: #434b54;
+.color3 {
+  color: #434b54;
 }
