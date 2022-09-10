@@ -1,25 +1,28 @@
-<h2>Log in</h2>
+   <header class="">
+    <nav>
+      <ul class="d-flex justify-content-between color1 p-2 m-0">
+        <li>
+        <%= link_to splash_screens_index_path do %>
+          <i class="fa fa-arrow-left color1"></i>
+          <% end %>
+        <li>
+        <li>
+          Login
+        <li>
+        <li>
+          <input type="submit" value='Sign in' form='form' class='submit color1'>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+ <%= form_for(resource, as: resource_name, url: session_path(resource_name), :html => {:class => 'form', :id => 'form' }) do |f| %>
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "w-100" %>
   </div>
 
   <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
-
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
-    </div>
-  <% end %>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
+    <%= f.password_field :password, autocomplete: "current-password", class: "w-100" %>
   </div>
 <% end %>
 

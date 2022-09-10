@@ -1,16 +1,15 @@
-
 <%= form_with model: category, url: categories_path, :html => {:class => 'form', :id => 'form' }  do |form| %>
        <div class="field">
-        <%= form.text_field :name, autofocus: true, autocomplete: "text", placeholder: "Enter category name" %>
+        <%= form.text_field :name, autofocus: true, autocomplete: "text", placeholder: "Enter category name" , class: "w-100"%>
         <% category.errors.full_messages_for(:name).each do |message| %>
           <div><%= message %></div>
         <% end %>
       </div>
        <div class="field">
-        <%= form.text_field :icon, autofocus: true, placeholder: "Enter category icon url" %>
+        <%= form.text_field :icon, autofocus: true, placeholder: "Enter category icon url", class: "w-100"%>
       </div>
 
        <div class="actions">
-      <%= form.submit "Add", class: 'category-btn'%>
+      <%= form.submit "Add", class: 'w-100 color2 p-2'%>
     </div>
 <% end %>
