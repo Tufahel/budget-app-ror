@@ -26,13 +26,13 @@
     </div>
     <hr>
     <% @transactions.each do |transaction| %> 
-    <div>
-      <span>
+    <div class="d-flex justify-content-between m-2">
+      <span class="color3">
         <h3><%= transaction.name %></h3>
         <small><%= transaction.created_at.to_date.strftime("%d %b, %Y") %></small>
       </span>
       <span>
-         <%= button_to "Remove", category_deal_path(@category,transaction), method: :delete, class: 'delete-transaction' %>
+         <%= button_to "Remove", category_deal_path(@category,transaction), method: :delete, class: 'btn color1' %>
       </span>
     </div>
     <hr>

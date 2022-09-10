@@ -17,11 +17,11 @@
   </header>
      <% if @categories.exists? %>
           <% @categories.each do |category| %>
-           <%= link_to category_path(category.id), method: :get do %> 
+           <%= link_to category_path(category.id), method: :get, class: "link color3" do %> 
             <div class='card m-2 p-3'>
               <div class="d-flex justify-content-between">
                 <div class="d-flex justify-content-center">
-                  <%= image_tag category.icon rescue image_tag 'https://img.icons8.com/fluency/48/000000/diversity.png' %>
+                  <%= image_tag category.icon, class:"border p-2 m-2" rescue image_tag 'https://img.icons8.com/fluency/48/000000/diversity.png' %>
                   <span>
                     <p><%= category.name %></p>
                     <small><%= category.created_at.to_date.strftime("%d %b, %Y") %></small>
