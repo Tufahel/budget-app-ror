@@ -1,0 +1,51 @@
+<section>
+  <header>
+    <nav>
+      <ul class='d-flex justify-content-between p-2 color1 m-0'>
+        <li>
+        <%= link_to categories_path do %>
+          <i class="fa fa-arrow-left color1"></i>
+          <% end %>
+        </li>
+        <li>
+          DETAILS
+        </li>
+        <li>
+          <i class="fa fa-bars"></i>
+        </li>
+      </ul>
+    </nav>
+  </header>
+ <section class="d-flex flex-column min-vh-100">
+ <div class="card m-4">
+    <div class="d-flex align-items-center">
+      <%= image_tag(@category.icon, class:"border p-2 m-2") %>
+      <span>
+        <h4><%= @category.name %></h4>
+      </span>
+    </div>
+    <hr>
+    <% @transactions.each do |transaction| %> 
+    <div class="d-flex justify-content-between m-2">
+      <span class="color3">
+        <h3><%= transaction.name %></h3>
+        <small><%= transaction.created_at.to_date.strftime("%d %b, %Y") %></small>
+      </span>
+      <span>
+         <%= button_to "Remove", category_deal_path(@category,transaction), method: :delete, class: 'btn color1' %>
+      </span>
+    </div>
+    <hr>
+    
+   <% end %>
+   <div class="m-2">
+      <h4>TOTAL PAYMENT</h4>
+      <p class="color3">$<%= @category.deals.sum(:amount) || '0.00' %></p>
+      <%= button_to "Delete Category", category_path, method: :delete, class: 'w-100 color2 p-2' %>
+   </div>
+  </div>
+  </section> 
+  <section class="mt-auto">
+    <%= button_to "Add New Transaction", new_category_deal_path(@category), method: :get, class: 'w-100 color2 p-2' %>
+  </section>
+</section>

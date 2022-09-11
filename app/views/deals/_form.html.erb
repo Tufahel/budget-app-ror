@@ -1,0 +1,21 @@
+<%= form_with model: deal, url: category_deals_path, :html => {:class => 'form', :id => 'form' }  do |form| %>
+       <div class="field">
+         <%= form.select :category, categories.map { |category| category.name}, :multiple => true, required: true, class: 'select' %><br />
+      <div>
+       <div class="field">
+        <%= form.text_field :name, autofocus: true, autocomplete: "text", placeholder: "Enter transaction name", class: "w-100" %>
+        <% deal.errors.full_messages_for(:name).each do |message| %>
+          <div><%= message %></div>
+        <% end %>
+      </div>
+      <div class="field">
+        <%= form.number_field :amount, autofocus: true, placeholder: "Enter Amount", class: "w-100"%>
+        <% deal.errors.full_messages_for(:amount).each do |message| %>
+          <div><%= message %></div>
+        <% end %>
+      </div>
+
+       <div class="actions">
+      <%= form.submit "Add", class: 'w-100 color2 p-2' %>
+    </div>
+<% end %>

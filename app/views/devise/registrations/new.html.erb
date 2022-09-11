@@ -1,0 +1,36 @@
+<section class="">
+   <header class="">
+    <nav>
+      <ul class="d-flex justify-content-between color1 p-2 m-0">
+        <li>
+        <%= link_to splash_screens_index_path do %>
+          <i class="fa fa-arrow-left color1"></i>
+          <% end %>
+        <li>
+        <li>
+          REGISTER
+        <li>
+        <li>
+          <input type="submit" value='Next' form='form' class='submit color1'>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), :html => {:class => 'form', :id => 'form' } ) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="field">
+    <%= f.text_field :name, autofocus: true, autocomplete: "text", placeholder: "Full name", class: "w-100" %>
+  </div>
+    
+  <div class="field">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: "w-100" %>
+  </div>
+
+  <div class="field">
+    <%= f.password_field :password, autocomplete: "new-password", placeholder: "Password", class: "w-100" %>
+  </div>
+
+<% end %>
+<%= render "devise/shared/links" %>
+</section>

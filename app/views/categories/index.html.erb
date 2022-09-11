@@ -1,0 +1,46 @@
+<section>
+  <section class="d-flex flex-column min-vh-100">
+    <header>
+      <nav>
+        <ul class='d-flex justify-content-between p-2 color1 m-0'>
+          <li>
+            <i class="fa fa-bars"></i>
+          </li>
+          <li>
+            TRANSACTIONS
+          </li>
+          <li class="logout">
+            <%= button_to "Logout", destroy_user_session_path(current_user), method: :delete, class: "color1" %>
+          </li>
+        </ul>
+      </nav>
+  </header>
+     <% if @categories.exists? %>
+          <% @categories.each do |category| %>
+           <%= link_to category_path(category.id), method: :get, class: "link color3" do %> 
+            <div class='card m-2 p-3'>
+              <div class="d-flex justify-content-between">
+                <div class="d-flex justify-content-center">
+                  <%= image_tag category.icon, class:"border p-2 m-2" rescue image_tag 'https://img.icons8.com/fluency/48/000000/diversity.png' %>
+                  <span>
+                    <p><%= category.name %></p>
+                    <small><%= category.created_at.to_date.strftime("%d %b, %Y") %></small>
+                  </span>
+                </div>
+                  <p class='strong'>$<%= category.deals.sum(:amount) || '0.00'%></p>
+              </div>
+            </div>
+          <% end %>
+        <% end %> 
+   <% else %>
+          <p>No Category Added yet</p> 
+   <% end %>
+  </section>
+
+  <section class="mt-auto">
+     <div>
+        <%= button_to "Add Category", new_category_path, method: :get, class: 'w-100 color2 p-2' %>
+     </div>
+    </div>
+  </section>
+</section>

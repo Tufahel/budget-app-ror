@@ -1,0 +1,29 @@
+   <header class="">
+    <nav>
+      <ul class="d-flex justify-content-between color1 p-2 m-0">
+        <li>
+        <%= link_to splash_screens_index_path do %>
+          <i class="fa fa-arrow-left color1"></i>
+          <% end %>
+        <li>
+        <li>
+          Login
+        <li>
+        <li>
+          <input type="submit" value='Sign in' form='form' class='submit color1'>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+ <%= form_for(resource, as: resource_name, url: session_path(resource_name), :html => {:class => 'form', :id => 'form' }) do |f| %>
+  <div class="field">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "w-100" %>
+  </div>
+
+  <div class="field">
+    <%= f.password_field :password, autocomplete: "current-password", class: "w-100" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
