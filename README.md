@@ -16,7 +16,7 @@
 - FontAwsome
 
 ## Live Demo
-For the link to the live demo, [Click here](https://mysterious-mountain-41910.herokuapp.com/)
+For the link to the live demo, [Click here](https://budget-app-ror.onrender.com)
 
 ## Getting Started
 
